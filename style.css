@@ -1,0 +1,21 @@
+* {
+    background-color: rgb(215, 209, 228);
+}
+
+.character {
+    width: 87px;
+    height: 126px;
+    background: red;
+    overflow: hidden;
+    margin-bottom: 20px; /* Apenas para espaçamento visual entre as divs */
+}
+
+.character img {
+    width: 720px; /* Largura total da sprite sheet (90px * 8) */
+    animation: moveSpriteSheetFrenteParaTras 1s steps(8) infinite alternate;
+}
+
+@keyframes moveSpriteSheetFrenteParaTras {
+    from {transform: translateX(0);}
+    to {transform: translateX(-720px);} /* -90px * 8 = -720px, ajuste conforme necessário */
+}
